@@ -92,7 +92,7 @@ public class Funcionario {
         this.setTelefone(telefone);
         this.setTemFilhos(temFilhos);
     }
-    public Funcionario(String cpf, Integer idade, String nome, String cargo, Endereco endereco, String rg, String telefone, Boolean temFilhos, Integer salario) {
+    public Funcionario(String cpf, Integer idade, String nome, String cargo, Endereco endereco, String rg, String telefone, Boolean temFilhos, BigDecimal salario) {
         this.setCpf(cpf);
         this.setIdade(idade);
         this.setNome(nome);
@@ -104,7 +104,7 @@ public class Funcionario {
         this.setSalario(salario);
     }
     
-    public Funcionario(String cpf, Integer idade, String nome, String cargo, Endereco endereco, String rg, String telefone, Boolean temFilhos, Integer salario, Integer cargaHoraria) {
+    public Funcionario(String cpf, Integer idade, String nome, String cargo, Endereco endereco, String rg, String telefone, Boolean temFilhos, BigDecimal salario, Integer cargaHoraria) {
         this.setCpf(cpf);
         this.setIdade(idade);
         this.setNome(nome);
@@ -117,7 +117,7 @@ public class Funcionario {
         this.setCargaHoraria(cargaHoraria);
     }
     
-    public Funcionario(String cpf, Integer idade, String nome, String cargo, Endereco endereco, String rg, String telefone, Boolean temFilhos, Integer salario, Integer cargaHoraria, Boolean fazHoraExtra) {
+    public Funcionario(String cpf, Integer idade, String nome, String cargo, Endereco endereco, String rg, String telefone, Boolean temFilhos, BigDecimal salario, Integer cargaHoraria, Boolean fazHoraExtra) {
         this.setCpf(cpf);
         this.setIdade(idade);
         this.setNome(nome);
@@ -210,11 +210,11 @@ public class Funcionario {
         this.temFilhos = temFilhos;
     }
 
-    public Integer getSalario() {
+    public BigDecimal getSalario() {
         return salario;
     }
 
-    public void setSalario(Integer salario) {
+    public void setSalario(BigDecimal salario) {
         validarNulo(salario, "O SALÁRIO não pode estar vazio!");
         this.salario = salario;
     }

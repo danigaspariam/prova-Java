@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
+import java.math.BigDecimal;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -295,7 +297,7 @@ public class FuncionarioTest {
 
     @Test
     public void deve_atribuir_salario() {
-        Integer salario = 4000;
+        BigDecimal salario = BigDecimal.valueOf(4000);
         funcionario.setSalario(salario);
         assertEquals(salario, funcionario.getSalario());
     }

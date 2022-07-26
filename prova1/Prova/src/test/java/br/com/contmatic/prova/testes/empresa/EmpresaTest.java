@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import org.junit.After;
@@ -183,7 +184,7 @@ public class EmpresaTest {
 
     @Test
     public void deve_atribuir_capital_social() {
-        Float capitalSocial = 10000000.00f;
+        BigDecimal capitalSocial = BigDecimal.valueOf(10000000.00);
         empresa.setCapitalSocial(capitalSocial);
         assertEquals(capitalSocial, empresa.getCapitalSocial());
     }
